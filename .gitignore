@@ -23,5 +23,7 @@ venv/
 fireblocks.csr
 fireblocks_secret.key
 rsa_key.pem
-fastapi_starter/__init__.py
 /hitesh_fastapi_starter.egg-info
+*.egg-info/
+dist/
+build/

@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hitesh-fastapi-starter"
+version = "2.0.1"
+description = "A production-grade CLI tool to scaffold modular FastAPI microservices with API Gateway, Redis caching, rate limiting, and security."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+    { name = "Hitesh Ladumor", email = "ladumorhitesh2668@gmail.com" }
+]
+keywords = [
+    "fastapi",
+    "starter",
+    "scaffold",
+    "microservices",
+    "boilerplate",
+    "cli",
+    "redis",
+    "asyncpg",
+    "rate-limit",
+    "gateway",
+    "api-gateway",
+    "security"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Framework :: FastAPI",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+]
+dependencies = []
+
+[project.scripts]
+hitesh-fastapi-starter = "fastapi_starter.generator:create_project_cli"
+fastapi-starter = "fastapi_starter.generator:create_project_cli"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["fastapi_starter*"]
